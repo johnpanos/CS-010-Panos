@@ -16,7 +16,6 @@ def main():
   giniDict = parseFile("gini.txt")
 
   # Add all countries to a set so we get rid of duplicates
-  # while also capitalizing all the words
   cSet = set()
   for country in lifeDict:
     cSet.add(country)
