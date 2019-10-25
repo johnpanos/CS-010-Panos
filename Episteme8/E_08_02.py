@@ -50,6 +50,8 @@ def main():
       for country in cList:
         if country.lower()[0] == newWord[0] and country != None:
           print("   " + country)
+
+    print()
     
 # Get the ball rollin'
 main()

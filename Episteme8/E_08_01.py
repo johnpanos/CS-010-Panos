@@ -32,6 +32,7 @@ def main():
       print("  Gini Value is %.1f" % giniDict[cInput])
     else:
       print("  No Gini Data")
+    print()
     
 # Get the ball rollin'
 main()
