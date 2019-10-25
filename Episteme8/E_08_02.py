@@ -1,3 +1,9 @@
+"""
+ @author John Panos (Westmont College)
+ @contact jpanos@westmont.edu
+ Created on Fri Oct 25 2019 12:05:05 PM
+"""
+
 def parseFile(file):
   # Open file with filename
   fileHandle = open(file, "r")
@@ -50,7 +56,6 @@ def main():
       for country in cList:
         if country.lower()[0] == newWord[0] and country != None:
           print("   " + country)
-
     print()
     
 # Get the ball rollin'

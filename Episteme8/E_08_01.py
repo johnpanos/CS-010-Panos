@@ -1,3 +1,9 @@
+"""
+ @author John Panos (Westmont College)
+ @contact jpanos@westmont.edu
+ Created on Fri Oct 25 2019 12:05:05 PM
+"""
+
 def parseFile(file):
   # Open file with filename
   fileHandle = open(file, "r")
