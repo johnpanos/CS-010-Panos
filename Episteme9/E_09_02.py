@@ -9,12 +9,12 @@ class ComboLock:
   # Constructor initializes default values
   def __init__(self, secret1, secret2, secret3):
     self.reset()
-    self.secret = [secret1, secret2, secret3]
+    self._secret = [secret1, secret2, secret3]
 
   # On reset, set current position to 0, and history to an empty list of three zeroes
   def reset(self):
     self.currentPos = 0
-    self.history = [0] * 3
+    self._history = [0] * 3
 
   # Upon turning left, change the position by adding to the current pos, and get current 
   # pos using currentPos modulo 40 and adding the current pos to the history list
@@ -30,14 +30,14 @@ class ComboLock:
   # Check to see if the value of the secret list equals
   # to the list of the last three currentPos values
   def open(self):
-    return self.secret == self.history
+    return self._secret == self._history
 
   # Private function to simplify adding to the history
   # This function shifts all values to the left, and adds the next value
   def _addHistory(self, toAdd):
-    if len(self.history) >= 3:
-      self.history.pop(0)
-    self.history.append(toAdd)
+    if len(self._history) >= 3:
+      self._history.pop(0)
+    self._history.append(toAdd)
 
   # Debug function that prints class state
   # def debug(self):
