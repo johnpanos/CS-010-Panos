@@ -1,7 +1,7 @@
 """
- @author John Panos (Westmont College)
- @contact jpanos@westmont.edu
- Created on Fri Oct 25 2019 12:05:05 PM
+ @author John Panos, Christopher French (Westmont College)
+ @contact jpanos@westmont.edu, cfrench@westmont.edu
+ Created on Thur Oct 7 2019 12:05:05 PM
 """
 
 # Class definition
@@ -43,24 +43,6 @@ class ComboLock:
   # def debug(self):
   #   print("="*10)
   #   print("currentPos: " + str(self.currentPos))
-  #   for i in range(0, len(self.history)):
-  #     print(str(i) + ": " + str(self.history[i]))
+  #   for i in range(0, len(self._history)):
+  #     print(str(i) + ": " + str(self._history[i]))
   #   print("="*10)
-
-myLock = ComboLock(10,20,10)
-myLock.reset()
-myLock.turnRight(30)
-myLock.turnLeft(10)
-myLock.turnRight(10)
-if(myLock.open() == True):
-  print("The lock opened") #Correct outcome
-else:
-  print("The lock didn't open")
-myLock.reset()
-myLock.turnLeft(30)
-myLock.turnRight(10)
-myLock.turnLeft(10)
-if(myLock.open() == True):
-  print("The lock opened")
-else:
-  print("The lock didn't open") #Correct outcome
