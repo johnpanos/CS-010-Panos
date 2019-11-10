@@ -13,6 +13,7 @@ myLock.reset()
 myLock.turnLeft(30)
 myLock.turnRight(10)
 myLock.turnLeft(10)
+# myLock.turnRight("bruh")
 if(myLock.open() == True):
   print("The lock opened")
 else:

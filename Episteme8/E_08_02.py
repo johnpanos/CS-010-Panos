@@ -1,7 +1,7 @@
 """
  @author John Panos (Westmont College)
  @contact jpanos@westmont.edu
- Created on Fri Oct 25 2019 12:05:05 PM
+ Created on Fri Oct 25 2019 12:15:36 PM
 """
 
 def parseFile(file):

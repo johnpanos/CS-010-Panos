@@ -9,7 +9,8 @@ class ComboLock:
   # Constructor initializes default values
   def __init__(self, secret1, secret2, secret3):
     self.reset()
-    self._secret = [secret1, secret2, secret3]
+    # Clamp the values of the secret from range 0-39 to match the lock
+    self._secret = [self._clamp(secret1), self._clamp(secret2), self._clamp(secret3)]
 
   # On reset, set current position to 0, and history to an empty list of three zeroes
   def reset(self):
@@ -32,17 +33,17 @@ class ComboLock:
   def open(self):
     return self._secret == self._history
 
+  # Clamp the number between the range of 0-39
+  def _clamp(self, number):
+    if number > 39:
+      return 39
+    if number < 0:
+      return 0
+    return number
+
   # Private function to simplify adding to the history
   # This function shifts all values to the left, and adds the next value
   def _addHistory(self, toAdd):
     if len(self._history) >= 3:
       self._history.pop(0)
     self._history.append(toAdd)
-
-  # Debug function that prints class state
-  # def debug(self):
-  #   print("="*10)
-  #   print("currentPos: " + str(self.currentPos))
-  #   for i in range(0, len(self._history)):
-  #     print(str(i) + ": " + str(self._history[i]))
-  #   print("="*10)
