@@ -1,4 +1,4 @@
-from E-10-Professor import Professor
+from E_10_01 import Professor
 
 #Test default constructor, and getters
 djp3 = Professor()
