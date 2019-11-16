@@ -1,3 +1,9 @@
+"""
+ @author John Panos (Westmont College)
+ @contact jpanos@westmont.edu
+ Created on Thur Oct 14 2019 11:23:08 AM
+"""
+
 class Person:
   # Init default instance variables and set them
   def __init__(self, name="", yearOfBirth=1970):
